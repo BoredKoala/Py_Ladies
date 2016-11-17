@@ -1,0 +1,19 @@
+odpowiedz = True
+zbior_informacji = []
+while odpowiedz:
+  imie = input('Podaj swoje imie:')
+  waga = int(input('Podaj swoja wage:'))
+  wzrost = float(input('Podaj swoj wzrost w metrach:'))
+  BMI = waga/wzrost**2
+  BMI_tresc = ' BMI = ' + str(round(BMI,2))
+  nowa_osoba = [imie,BMI_tresc]
+  zbior_informacji.append(nowa_osoba)
+  pytanie = input('Czy dodac kolejna osobe t/n?')
+  if pytanie == 'n':
+    odpowiedz = False
+    
+from pprint import pprint as pp
+
+size = len(zbior_informacji)
+for a in range(size):
+  print(zbior_informacji[a][0] + zbior_informacji[a][1])
