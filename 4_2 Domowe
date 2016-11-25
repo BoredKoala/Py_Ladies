@@ -1,0 +1,16 @@
+def pobierz():
+  wpis = input("Wpisz dowolnie dlugie zdanie:")
+  wpis_strip = wpis.strip()
+  wyrazy = wpis_strip.split()
+  return(wyrazy)
+
+def wyswietl(wyrazy):
+  finall = []
+  for a in range(len(wyrazy)):
+    duze_literki = wyrazy[a].capitalize()
+    finall.append(duze_literki.replace("Voldemort","Sam-wiesz-kto"))
+  print(finall)
+
+dane = pobierz()
+wyswietl(dane)
+  
